@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesService } from '../courses.service'
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  styleUrls: ['./courses.component.css'],
+  providers: [CoursesService]
 })
 export class CoursesComponent implements OnInit {
   
   title = "Courses";
-  courses = ["Course1", "Course2", "Course3"]
+  courses;
    
-  constructor() {
-    
-   
-    
+  constructor(courseService: CoursesService) {
+    this.courses = courseService.getCourses();
     
   }
 

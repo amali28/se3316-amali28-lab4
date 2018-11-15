@@ -5,5 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class CoursesService {
 
+  public getCourses(): string[]{
+      return ["Course1", "Course2", "Course3"];
+  }
+
+
   constructor() { }
 }
