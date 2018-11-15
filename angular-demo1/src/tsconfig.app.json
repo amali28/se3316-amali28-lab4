@@ -1,3 +1,6 @@
+// configuration file for the typescript compiler
+// typescript files => javascript files
+
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
