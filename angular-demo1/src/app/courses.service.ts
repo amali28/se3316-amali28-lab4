@@ -5,8 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class CoursesService {
 
+  private _coursesInSystem = [];
+  
   public getCourses(): string[]{
-      return ["Course1", "Course2", "Course3"];
+      return this.coursesInSystem;
+  }
+  
+  public addCourse(textInput: string) {
+    
+  this.coursesInSystem.push(textInput);
+    
   }
 
 

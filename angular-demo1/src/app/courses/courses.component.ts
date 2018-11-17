@@ -12,13 +12,20 @@ export class CoursesComponent implements OnInit {
   
   title = "Courses";
   courses;
+  courseInput;
+  addCourse;
    
-  constructor(courseService: CoursesService) {
+  constructor(private courseService: CoursesService) {
     this.courses = courseService.getCourses();
     
   }
+  
+  onClick(textInput: string){
+    this.addCourse = this.courseService.addCourse(textInput);
+  }
 
   ngOnInit() {
+    providers: [CoursesService];
   }
 
 }
