@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "https://node-angular-amali28.c9users.io:8081",
+        "target": "https://se3316-amali28-lab4-cloned-amali28.c9users.io:8081",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "info"
