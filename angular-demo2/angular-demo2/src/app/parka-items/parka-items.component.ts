@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 export class ParkaItemsComponent implements OnInit {
 
   private _response: Observable<any[]>;
+  private dataCollected: [string, number, number, number];
+  
   
   constructor(private _getParkas: ParkaItemsService) { }
 
@@ -20,8 +22,12 @@ export class ParkaItemsComponent implements OnInit {
     this._getParkas.getParkaData(this.onResponse.bind(this));
   }
   
-  onResponse(_res: Observable<any[]>){
-    this._response = _res;
+  
+  addParka(p_name: string, p_price: number, p_quantity: number, p_tax: number){
+     this._getParkas.postParkaData(p_name, p_price, p_quantity, p_tax, this.onResponse.bind(this));
   }
   
+   onResponse(_res: Observable<any[]>){
+    this._response = _res;
+  }
 }

@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ParkaItemsComponent } from './parka-items/parka-items.component';
 import { ParkaItemsService } from './parka-items.service';
+import { RetrieveParkasComponent } from './retrieve-parkas/retrieve-parkas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParkaItemsComponent
+    ParkaItemsComponent,
+    RetrieveParkasComponent
   ],
   imports: [
     BrowserModule,
